@@ -23,6 +23,7 @@ class Form extends React.Component {
           <input
             type="text"
             data-testid="name-input"
+            placeholder="Nome da carta"
             id="name-input"
             name="cardName"
             value={ cardName }
@@ -37,6 +38,7 @@ class Form extends React.Component {
             cols="30"
             rows="10"
             data-testid="description-input"
+            placeholder="Descrição da carta"
             name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
@@ -48,6 +50,9 @@ class Form extends React.Component {
           <input
             type="number"
             data-testid="attr1-input"
+            placeholder="Máximo de 90 pontos"
+            min="0"
+            max="90"
             name="cardAttr1"
             value={ cardAttr1 }
             onChange={ onInputChange }
@@ -59,6 +64,9 @@ class Form extends React.Component {
           <input
             type="number"
             data-testid="attr2-input"
+            placeholder="Máximo de 90 pontos"
+            min="0"
+            max="90"
             name="cardAttr2"
             value={ cardAttr2 }
             onChange={ onInputChange }
@@ -70,6 +78,9 @@ class Form extends React.Component {
           <input
             type="number"
             data-testid="attr3-input"
+            placeholder="Máximo de 90 pontos"
+            min="0"
+            max="90"
             name="cardAttr3"
             value={ cardAttr3 }
             onChange={ onInputChange }
@@ -81,6 +92,7 @@ class Form extends React.Component {
           <input
             type="text"
             data-testid="image-input"
+            placeholder="URL da imagem"
             name="cardImage"
             value={ cardImage }
             onChange={ onInputChange }
