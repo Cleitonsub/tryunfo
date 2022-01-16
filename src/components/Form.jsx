@@ -10,7 +10,7 @@ class Form extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      hasTrunfo,
+      // hasTrunfo,
       isSaveButtonDisabled, onInputChange,
       onSaveButtonClick,
     } = this.props;
@@ -44,7 +44,7 @@ class Form extends React.Component {
         </label>
 
         <label htmlFor="attr1-input">
-          Atributo 1
+          Ataque
           <input
             type="number"
             data-testid="attr1-input"
@@ -55,7 +55,7 @@ class Form extends React.Component {
         </label>
 
         <label htmlFor="attr2-input">
-          Atributo 2
+          Defesa
           <input
             type="number"
             data-testid="attr2-input"
@@ -66,7 +66,7 @@ class Form extends React.Component {
         </label>
 
         <label htmlFor="attr3-input">
-          Atributo 3
+          Estrelas
           <input
             type="number"
             data-testid="attr3-input"
@@ -127,7 +127,7 @@ class Form extends React.Component {
   }
 }
 
-Form.protoTypes = {
+Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardDescription: PropTypes.string.isRequired,
   cardAttr1: PropTypes.string.isRequired,
@@ -136,7 +136,7 @@ Form.protoTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.bool.isRequired,
+  // hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.bool.isRequired,
