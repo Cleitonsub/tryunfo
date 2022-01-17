@@ -10,7 +10,7 @@ class Form extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // hasTrunfo,
+      hasTrunfo,
       isSaveButtonDisabled, onInputChange,
       onSaveButtonClick,
     } = this.props;
@@ -113,18 +113,24 @@ class Form extends React.Component {
             <option value="muito raro">Muito raro</option>
           </select>
         </label>
+        {
+        // Ponto de exclamação utilizado para reduzir o código.
+        // Ideia tirada do site de Ricardo Reis.
+        // https://ricardo-reis.medium.com/operadores-l%C3%B3gicos-logical-operators-b0687819d1a5
+        }
+        { !hasTrunfo ? (
+          <label htmlFor="trunfo-input">
+            Super Trunfo
+            <input
+              type="checkbox"
+              data-testid="trunfo-input"
+              id="trunfo-input"
+              name="cardTrunfo"
+              checked={ cardTrunfo }
+              onChange={ onInputChange }
+            />
+          </label>) : (<p>Você já tem um Super Trunfo em seu baralho</p>) }
 
-        <label htmlFor="trunfo-input">
-          Super Trunfo
-          <input
-            type="checkbox"
-            data-testid="trunfo-input"
-            id="trunfo-input"
-            name="cardTrunfo"
-            checked={ cardTrunfo }
-            onChange={ onInputChange }
-          />
-        </label>
         <button
           type="button"
           data-testid="save-button"
@@ -148,7 +154,7 @@ Form.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  // hasTrunfo: PropTypes.bool.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.bool.isRequired,
